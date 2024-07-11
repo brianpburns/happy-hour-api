@@ -1,5 +1,5 @@
 import asyncHandler from 'express-async-handler';
-import data from '../data.json';
+import data from '../pubs.json';
 
 const isError = (error: unknown): error is Error =>
   (error as Error).message !== undefined;
