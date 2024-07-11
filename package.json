@@ -1,0 +1,43 @@
+{
+  "name": "@happy-hour/api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development ts-node-dev --project tsconfig.server.json src/index.ts",
+    "server:prod": "NODE_ENV=production node dist/index.js",
+    "build:prod": "NODE_ENV=production tsc --project tsconfig.server.json",
+    "check-types": "tsc --noEmit && tsc --project tsconfig.server.json --noEmit",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:eslint": "eslint src --ext .ts,.tsx",
+    "lint:prettier": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "test": "jest",
+    "tests": "npm run test",
+    "test:coverage": "npm run test -- --coverage",
+    "render:startup": "npm ci; npm run build:prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianpburns/happy-hour-api.git"
+  },
+  "author": "Brian Burns",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianpburns/happy-hour-api/issues"
+  },
+  "homepage": "https://github.com/brianpburns/happy-hour-api#readme",
+  "dependencies": {
+    "@types/cors": "^2.8.17",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-async-handler": "^1.2.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "dotenv": "^16.4.5",
+    "ts-node-dev": "^2.0.0",
+    "webpack": "^5.92.1",
+    "webpack-dev-server": "^4.15.2",
+    "webpack-merge": "^6.0.1"
+  }
+}
