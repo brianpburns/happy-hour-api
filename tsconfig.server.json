@@ -12,6 +12,7 @@
     "outDir": "./dist",
     "moduleResolution": "node",
     "sourceMap": true,
+    "resolveJsonModule": true,
     "baseUrl": "./"
   },
   "compileOnSave": true
