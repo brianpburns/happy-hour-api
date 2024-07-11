@@ -13,7 +13,7 @@ const config: Configuration = {
         use: [
           {
             loader: 'ts-loader',
-            options: { configFile: 'tsconfig.dev.server.json' },
+            options: { configFile: 'tsconfig.server.json' },
           },
         ],
         exclude: /node_modules/,

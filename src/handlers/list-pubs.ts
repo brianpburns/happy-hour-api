@@ -1,4 +1,5 @@
 import asyncHandler from 'express-async-handler';
+import data from '../data.json';
 
 const isError = (error: unknown): error is Error =>
   (error as Error).message !== undefined;
@@ -6,9 +7,7 @@ const isError = (error: unknown): error is Error =>
 export function listPubs() {
   return asyncHandler(async (_req, res) => {
     try {
-      const pubs = { 1: { name: 'Carlos O Bryans' } };
-
-      res.status(200).send(pubs);
+      res.status(200).send(data);
     } catch (error) {
       console.error('Error fetching pubs', error);
       throw error;
