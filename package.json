@@ -30,7 +30,10 @@
     "@types/cors": "^2.8.17",
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "express-async-handler": "^1.2.0"
+    "express-async-handler": "^1.2.0",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^12.0.2",
