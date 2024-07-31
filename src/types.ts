@@ -9,7 +9,7 @@ export interface Coordinate {
   longitude: number;
 }
 
-export interface Pub {
+export interface PubType {
   googlePlaceId: string;
   name: string;
   website: string;
